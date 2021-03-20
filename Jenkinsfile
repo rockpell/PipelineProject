@@ -9,7 +9,9 @@ stage('Build Stage') {
 }
 
 stage('npm') {
-	sh 'npm install && npm run build'
+	nodejs(nodeJSInstallationName: 'Node.js') {
+        sh 'npm install && npm run build'
+    }
 }
 
 stage('Push Stage') {
