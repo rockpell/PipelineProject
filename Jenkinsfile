@@ -1,10 +1,13 @@
-pipeline {
-    agent { docker { image 'node:14-alpine' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'npm install && npm start'
-            }
-        }
-    }
+echo "--build start--"
+
+stage('Checkout Stage') {
+	echo "--Checkout--"
+}
+
+stage('Build Stage') {
+	echo "--Build Stage--"
+}
+
+stage('PUsh Stage') {
+	echo "--PUsh Stage--"
 }
