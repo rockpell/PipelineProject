@@ -6,10 +6,10 @@ stage('Checkout Stage') {
 
 stage('Build Stage') {
 	echo "--Build Stage--"
-	npm install
+	sh 'npm install'
 }
 
 stage('Push Stage') {
 	echo "--PUsh Stage--"
-	pm2 start
+	sh 'pm2 start'
 }
